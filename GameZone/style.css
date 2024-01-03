@@ -1,0 +1,967 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #000;
+}
+main{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+:root{
+    --colorGreen: #00e3d8;
+    --colorBlue: #2f89ff;
+}
+
+/* Scroll Animation */
+.animation{
+    opacity: 0;
+    transform: translateX(1%) scale(0);
+    transition: all .5s ease;
+}
+
+/* Loading */
+.loading-overlay{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+}
+.logo-loading{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #fff;
+}
+.logo-loading p{
+    font-size: 2.7rem;
+}
+.logo-loading i{
+    font-size: 4rem;
+}
+.spinner {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to right, #00e3d8, #2f89ff);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 1s linear infinite;
+    text-align: center;
+    line-height: 100px;
+    font-size: 4.5rem;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* GameZone */
+#gamezone{
+    display: flex;
+    justify-content: center;
+    height: 590px;
+    color: #fff;
+}
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 540px;
+    gap: 1.2rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.logo h1{
+    font-size: 1.9rem;
+}
+.logo-icon{
+    font-size: 1rem;
+    transform: rotate(-20deg);
+}
+.title-home{
+    font-size: 3.5rem;
+}
+.cards{
+    display: flex;
+    gap: 15px;
+}
+.card{
+    position: relative;
+    width: 220px;
+    padding: 10px;
+    border: solid 2.9px #fff;
+    border-radius: 25px;
+}
+.icon-card{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 2rem;
+    color: var(--colorBlue);
+}
+.card h1{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--colorGreen);
+}
+.card p{
+    font-size: 1rem;
+}
+.btn-home button{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    background-image: linear-gradient(40deg, var(--colorBlue), var(--colorGreen) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 220%;
+    transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.btn-home button:hover{
+    transform: scale(110%);
+    background-position: 0;
+}
+.right{
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.9rem;
+}
+.img-home{
+    width: 510px;
+    height: 390px;
+    background: url(./img/game-img.png);
+    background-size: cover;
+}
+.social-media{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.9rem;
+    margin-left: 120px;
+}
+.social-media:hover{
+    transform: scale(107%);
+    transition: .2s;
+}
+.social-media a{
+    color: var(--colorBlue);
+}
+.social-media a:hover{
+    color: var(--colorGreen);
+    transform: scale(112%);
+    transition: .2s;
+}
+
+/* SpaceGaming */
+#spacegaming{
+    width: 100%;
+    height: 550px;
+    display: flex;
+}
+.img-side{
+    width: 29%;
+    height: 100%;
+    background: url(./img/img-spacegaming.png);
+    background-size: cover;
+}
+.line-gradient{
+    width: 10px;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(0deg, var(--colorBlue), var(--colorGreen));
+}
+.space-content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 50px;
+}
+.Title-content{
+    text-align: center;
+    color: #fff
+}
+.cards-content{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.card-content{
+    width: 190px;
+    height: 240px;
+    border: 2.5px solid #fff;
+    border-radius: 25px;
+}
+.text-card{
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    backdrop-filter: blur(1.4px);
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, var(--colorBlue), transparent);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: .4s;
+    cursor: default;
+}
+.card-content:hover .text-card{
+    transition: .4s;
+    opacity: 1;
+    box-shadow: 0 0 40px #72afff;
+}
+.card-content:nth-child(1){
+    background: url(./img/Graphic.png);
+    background-size: cover;
+}
+.card-content:nth-child(2){
+    background: url(./img/Processor.png);
+    background-size: cover;
+}
+.card-content:nth-child(3){
+    background: url(./img/Memory.png);
+    background-size: cover;
+}
+.card-content:nth-child(4){
+    background: url(./img/Fans.png);
+    background-size: cover;
+}
+.text-mobile-cards{
+    display: none;
+}
+.text-content h1{
+    font-size: 2.5rem;
+    background: linear-gradient(0deg, var(--colorBlue), var(--colorGreen));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-content p{
+    font-size: 1.4rem;
+    color: #fff;
+}
+.buttons-content{
+    display: flex;
+    gap: 10px;
+}
+.buttons-content button{
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    background-image: linear-gradient(40deg, var(--colorBlue), var(--colorGreen) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 220%;
+    transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.buttons-content button:hover{
+    transform: scale(110%);
+    background-position: 0;
+}
+
+/* PC */
+#pc{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    overflow: hidden;
+}
+.btn-pc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+    background-color: #bebebe;
+    border-radius: 15px;
+}
+.header-web{
+    display: flex;
+    height: 35px;
+    background-color: #fff;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo i{
+    font-size: 1.7rem;
+    transform: rotate(-15deg);
+}
+.balls{
+    height: 10px;
+    display: flex;
+    gap: 7px;
+    margin-bottom: 7px;
+}
+.balls span{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+.balls span:nth-child(1){
+    background-color: #db0000;
+}
+.balls span:nth-child(2){
+    background-color: #dbe700;
+}
+.balls span:nth-child(3){
+    background-color: #2ea200;
+}
+.container-btn-pc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 7px 40px;
+    z-index: 100;
+}
+.container-btn-pc button{
+    border: 2.5px solid #fff; 
+    background-color: transparent;
+    border-radius: 40px;
+    padding: 2px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container-btn-pc button:hover{
+    background-color: var(--colorBlue);
+    color: #fff;
+    box-shadow: 0 0 15px #0080ff;
+    transition: .2s;
+}
+.btn-color{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.btn-color p{
+    color: #000;
+}
+.container-btn-color{
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+    justify-content: center;
+}
+.container-btn-color span{
+    cursor: pointer;
+    border: 2px solid #fff;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+}
+.btn-off{
+    font-size: .7rem;
+    background-color: #000;
+    color: #fff;
+}
+.btn-colorRed{
+    background-color: #db0000;
+}
+.btn-colorGreen{
+    background-color: #39c800;
+}
+.btn-colorBlue{
+    background-color: #126dff;
+}
+.btn-rgb{
+    background: linear-gradient(90deg, #db0000 10%, #39c800, #126dff 85%);
+}
+
+.components{
+    text-align: center;
+    height: 340px;
+    width: 340px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #797979;
+}
+.container-pc{
+    position: relative;
+    display: flex;
+    width: 340px;
+    height: 340px;
+    color: #fff;
+    background-color: #797979;
+    border-radius: 10px;
+}
+.pc div{
+    position: absolute;
+    width: 340px;
+    height: 340px;
+}
+#casein{
+    background: url(./pc/caseinside.png);
+    background-size: cover;
+}
+#mboard{
+    background: url(./pc/motherboard.png);
+    background-size: cover;
+}
+#ssd{
+    background: url(./pc/ssd.png);
+    background-size: cover;
+}
+#cpu{
+    background: url(./pc/processor.png);
+    background-size: cover;
+}
+#gpu{
+    background: url(./pc/graphics.png);
+    background-size: cover;
+    position: absolute;
+    filter: grayscale(100%);
+}
+#fan1{
+    background: url(./pc/fan1.png);
+    background-size: cover;
+    filter: grayscale(100%);
+}
+#fan2{
+    background: url(./pc/fan2.png);
+    background-size: cover;
+    filter: grayscale(100%);
+}
+#fan3{
+    background: url(./pc/fan3.png);
+    background-size: cover;
+    filter: grayscale(100%);
+}
+#ram{
+    background: url(./pc/memory.png);
+    background-size: cover;
+    filter: grayscale(100%);
+}
+#liquidc{
+    background: url(./pc/cooler.png);
+    background-size: cover;
+    filter: grayscale(100%);
+}
+#case{
+    background: url(./pc/case.png);
+    background-size: cover;
+}
+
+.rgb-on #ram{
+    animation: rgb infinite 1.5s;
+}
+.rgb-on #gpu{
+    animation: rgb infinite 1.5s;
+}
+.rgb-on #liquidc{
+    animation: rgb infinite 1.5s;
+}
+.rgb-on #fan1{
+    animation: rgb infinite 1.5s;
+}
+.rgb-on #fan2{
+    animation: rgb infinite 1.5s;
+}
+.rgb-on #fan3{
+    animation: rgb infinite 1.5s;
+}
+@keyframes rgb {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(270deg);
+    }
+    100%{
+        filter: hue-rotate(20deg);
+    }
+}
+
+.redColor-on #ram{
+    filter: hue-rotate(159deg);
+}
+.redColor-on #gpu{
+    filter: hue-rotate(140deg);
+}
+.redColor-on #liquidc{
+    filter: hue-rotate(140deg);
+}
+.redColor-on #fan1{
+    filter: hue-rotate(140deg);
+}
+.redColor-on #fan2{
+    filter: hue-rotate(140deg);
+}
+.redColor-on #fan3{
+    filter: hue-rotate(140deg);
+}
+
+.greenColor-on #ram{
+    filter: hue-rotate(280deg);
+}
+.greenColor-on #gpu{
+    filter: hue-rotate(280deg);
+}
+.greenColor-on #liquidc{
+    filter: hue-rotate(280deg);
+}
+.greenColor-on #fan1{
+    filter: hue-rotate(280deg);
+}
+.greenColor-on #fan2{
+    filter: hue-rotate(280deg);
+}
+.greenColor-on #fan3{
+    filter: hue-rotate(280deg);
+}
+
+.blueColor-on #ram{
+    filter: grayscale(0%);
+}
+.blueColor-on #gpu{
+    filter: grayscale(0%);
+}
+.blueColor-on #liquidc{
+    filter: grayscale(0%);
+}
+.blueColor-on #fan1{
+    filter: grayscale(0%);
+}
+.blueColor-on #fan2{
+    filter: grayscale(0%);
+}
+.blueColor-on #fan3{
+    filter: grayscale(0%);
+}
+
+/* Component Animation */
+.move-mboard #mboard{
+    transform: translateX(-94%) scale(180%) rotate(4deg);
+    transition: .4s;
+}
+.move-cpu #cpu{
+    transform: translateX(-65%) translateY(22%) scale(400%) rotate(10deg);
+    transition: .4s;
+}
+.move-ram #ram{
+    transform: translateX(-104%) translateY(14%) scale(270%) rotate(10deg);
+    transition: .4s;
+}
+.move-gpu #gpu{
+    transform: translateX(-85%) translateY(-15%) scale(170%) rotate(20deg);
+    transition: .4s;
+}
+.move-liquidc #liquidc{
+    transform: translateX(-112%) translateY(25%) scale(145%) rotate(15deg);
+    transition: .4s;
+}
+.move-fan #fan1{
+    transform: translateX(-130%) rotate(1deg);
+    transition: .4s;
+}
+.move-fan #fan2{
+    transform: translateX(-115%) rotate(-5deg);
+    transition: .4s;
+}
+.move-fan #fan3{
+    transform: translateX(-132%) translateY(-5%) rotate(8deg);
+    transition: .4s;
+}
+.move-ssd #ssd{
+    transform: translateX(-55%) translateY(-20%) scale(470%) rotate(10deg);
+    transition: .4s;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #002e5c;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 7px;
+    gap: 4px;
+    color: #fff;
+}
+.logo-footer i{
+    font-size: 2rem;
+}
+.logo-footer p{
+    font-size: 1.7rem;
+}
+.copyright{
+    color: #fff;
+    opacity: 45%;
+    font-size: .8rem;
+}
+
+
+@media (max-width: 1024px){
+    /* GameZone */
+    #gamezone{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .left{
+        width: 100%;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 7px;
+    }
+    .logo-icon{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .cards{
+        justify-content: center;
+    }
+    .right{
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+    }
+    .social-media{
+        margin: 0;
+    }
+    .social-media:hover{
+        transform: scale(100%);
+    }
+    /* GamingSpace */
+    #spacegaming{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cards-content{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card-content{
+        width: 310px;
+        height: 400px;
+    }
+    .text-mobile-cards{
+        display: block;
+    }
+    .img-side{
+        display: none;
+    }
+    .line-gradient{
+        display: none;
+    }
+    .buttons-content{
+        justify-content: center;
+    }
+    /* PC */
+    #pc{
+        gap: 5px;
+    }
+    .btn-pc{
+        width: 270px;
+        gap: 5px;
+        height: auto;
+    }
+    .components{
+        width: 220px;
+        height: 220px;
+    }
+    .container-pc{
+        width: 220px;
+        height: 220px;
+    }
+    .pc div{
+        width: 220px;
+        height: 220px;
+    }
+}
+@media (max-width: 750px){
+    /* Loading */
+    .loading-overlay{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo-loading p{
+        font-size: 1.5rem;
+    }
+    .logo-loading i{
+        font-size: 2rem;
+    }
+    .spinner{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 4rem;
+    }
+
+    /* GameZone */
+    #gamezone{
+        flex-direction: column;
+        height: auto;
+    }
+    .left{
+        width: 100%;
+        padding: 0 40px;
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .logo h1{
+        font-size: 1.2rem;
+    }
+    .title-home{
+        text-align: center;
+        font-size: 1.9rem;
+    }
+    .logo-icon{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .logo-icon i{
+        font-size: 2.2rem;
+    }
+    .cards{
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+    .card{
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+    }
+    .card h1{
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    .card p{
+        font-size: .8rem;
+    }
+    .btn-home button{
+        font-size: 1rem;
+    }
+    .btn-home button:hover{
+        transform: scale(100%);
+    }
+    .right{
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+    .img-home{
+        width: 240px;
+        height: 200px;
+        background-position: center;
+    }
+    .social-media{
+        margin: 0;
+    }
+    .social-media:hover{
+        transform: scale(100%);
+    }
+
+    /* GamingSpace */
+    #spacegaming{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+    .img-side{
+        display: none;
+    }
+    .line-gradient{
+        display: none;
+    }
+    .content{
+        padding: 12px;
+    }
+    .Title-content{
+        font-size: 1.2rem;
+    }
+    .cards-content{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .card-content{
+        width: 140px;
+        height: 190px;
+    }
+    .text-card{
+        font-size: 1.2rem;
+    }
+    .text-mobile-cards{
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: .7rem;
+    }
+    .text-content{
+        padding: 0 40px;
+        text-align: center;
+    }
+    .text-content h1{
+        font-size: 1.8rem;
+    }
+    .text-content p{
+        font-size: 1.25rem;
+    }
+    .buttons-content{
+        justify-content: center;
+    }
+    .buttons-content button{
+        font-size: 1rem;
+    }
+
+    /* PC */
+    #pc{
+        flex-direction: column;
+        height: auto;
+        padding: 15px 40px;
+        gap: 5px;
+    }
+    .btn-pc{
+        width: 270px;
+        gap: 5px;
+        height: auto;
+    }
+    .logo i{
+        font-size: 1.4rem;
+        transform: rotate(-15deg);
+    }
+    .balls{
+        margin: 0;
+    }
+    .balls span{
+        width: 12.5px;
+        height: 12.5px;
+        border-radius: 50%;
+    }
+    .container-btn-pc{
+        padding: 10px;
+        gap: 2px;
+    }
+    .container-btn-pc button{
+        font-size: .8rem;
+        padding: 2px 0;
+    }
+    .container-btn-pc button:hover{
+        background-color: transparent;
+        box-shadow: 0 0 0 transparent;
+        color: #000;
+    }
+    .btn-color{
+        font-size: .8rem;
+    }
+    .container-btn-color{
+        gap: 2px;
+    }
+    .components{
+        width: 240px;
+        height: 240px;
+    }
+    .container-pc{
+        width: 240px;
+        height: 240px;
+    }
+    .pc div{
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Component Animation */
+    .move-mboard #mboard{
+        transform: translateX(10%) translateY(-100%) scale(180%) rotate(4deg);
+        transition: .4s;
+    }
+    .move-cpu #cpu{
+        transform: translateX(40%) translateY(-80%) scale(400%) rotate(10deg);
+        transition: .4s;
+    }
+    .move-ram #ram{
+        transform: translateX(2%) translateY(-85%) scale(270%) rotate(10deg);
+        transition: .4s;
+    }
+    .move-gpu #gpu{
+        transform: translateX(19%) translateY(-115%) scale(170%) rotate(20deg);
+        transition: .4s;
+    }
+    .move-liquidc #liquidc{
+        transform: translateX(-8%) translateY(-72%) scale(145%) rotate(15deg);
+        transition: .4s;
+    }
+    .move-fan #fan1{
+        transform: translateX(-29%) translateY(-100%) rotate(1deg);
+        transition: .4s;
+    }
+    .move-fan #fan2{
+        transform: translateX(-15%) translateY(-100%) rotate(-5deg);
+        transition: .4s;
+    }
+    .move-fan #fan3{
+        transform: translateX(-19%) translateY(-105%) rotate(8deg);
+        transition: .4s;
+    }
+    .move-ssd #ssd{
+        transform: translateX(50%) translateY(-120%) scale(470%) rotate(10deg);
+        transition: .4s;
+    }
+}
