@@ -35,6 +35,14 @@
 #
 
 <div align="center">
+<img width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+<img width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+<img width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+</div>
+
+#
+
+<div align="center">
   
 ### ANIMATIONS
 https://private-user-images.githubusercontent.com/122825893/293831108-7ad84dbc-2fac-47e2-a166-74e9f8d3448f.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQyNTQ1OTYsIm5iZiI6MTcwNDI1NDI5NiwicGF0aCI6Ii8xMjI4MjU4OTMvMjkzODMxMTA4LTdhZDg0ZGJjLTJmYWMtNDdlMi1hMTY2LTc0ZTlmOGQzNDQ4Zi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMTAzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDEwM1QwMzU4MTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YzVhMmNiM2NkY2RhMzBiMWUwYTU0OTU3YjU3ZGU3MWQ4Y2VmZmRmMzEzM2U2ZTRhMzI2OTE2OTNjM2U1N2RmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.eLOOvH09d01jTLyCNo5r81Rxu_lmgljN0mgOTfKcUj4
