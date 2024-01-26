@@ -27,9 +27,9 @@
 
 <div align="center">
   <p>Screens</p>
-<img width="120" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/e656dbba-38e3-4d46-8353-e8a0dd65b0e6" />
-<img width="120" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/27694d7c-d5f9-46c4-b91d-5c197a1ff341" />
-<img width="120" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/54aeaadf-2f00-48a2-a27e-31ad3b53fd73" />
+<img width="80" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/e656dbba-38e3-4d46-8353-e8a0dd65b0e6" />
+<img width="80" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/27694d7c-d5f9-46c4-b91d-5c197a1ff341" />
+<img width="80" src="https://github.com/EliasDesignTech/GameZone/assets/122825893/54aeaadf-2f00-48a2-a27e-31ad3b53fd73" />
 </div>
 
 #
